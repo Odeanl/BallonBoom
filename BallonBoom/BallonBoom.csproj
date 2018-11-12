@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E402E473-B96B-47DE-B0BE-582CBC70E6F3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BallonBoom</RootNamespace>
+    <AssemblyName>BallonBoom</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\WindowsGL\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\WindowsGL\Release\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Balao\Balao.cs" />
+    <Compile Include="Balao\BalaoAmarelo.cs" />
+    <Compile Include="Balao\BalaoAzul.cs" />
+    <Compile Include="Balao\BalaoDourado.cs" />
+    <Compile Include="Balao\BalaoPreto.cs" />
+    <Compile Include="Balao\BalaoVermelho.cs" />
+    <Compile Include="EstadosDoMenu\Estadocredito.cs" />
+    <Compile Include="EstadosDoMenu\Estadogameover.cs" />
+    <Compile Include="EstadosDoMenu\Estadoinstrucao.cs" />
+    <Compile Include="EstadosDoMenu\Estatosjogo.cs" />
+    <Compile Include="EstadosDoMenu\Gerenciador.cs" />
+    <Compile Include="EstadosDoMenu\Menu.cs" />
+    <Compile Include="Game1.cs" />
+    <Compile Include="Jogo\EstadoPause.cs" />
+    <Compile Include="Jogo\Jogando.cs" />
+    <Compile Include="Jogo\Scrolling.cs" />
+    <Compile Include="Jogo\VidasEPontos.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="OpenTK">
+      <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\WindowsGL\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\WindowsGL\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Lidgren.Network">
+      <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\WindowsGL\Lidgren.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="Tao.Sdl">
+      <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\WindowsGL\Tao.Sdl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\..\..\..\..\..\Program Files\MonoGame\v3.0\Assemblies\WindowsGL\SDL.dll">
+      <Link>SDL.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\ArteDoJogo\BalaoAmarelo.png" />
+    <Content Include="Content\ArteDoJogo\BalaoAzul.png" />
+    <Content Include="Content\ArteDoJogo\BalaoDeVida.png" />
+    <Content Include="Content\ArteDoJogo\BalaoDourado.png" />
+    <Content Include="Content\ArteDoJogo\BalaoPreto.png" />
+    <Content Include="Content\ArteDoJogo\BalaoVermelho.png" />
+    <Content Include="Content\ArteDoJogo\barra.png" />
+    <Content Include="Content\ArteDoJogo\desenho.png" />
+    <Content Include="Content\ArteDoJogo\Scrolling.png" />
+    <Content Include="Content\ArteDoMenu\Back.png" />
+    <Content Include="Content\ArteDoMenu\credit.png" />
+    <Content Include="Content\ArteDoMenu\credito.png" />
+    <Content Include="Content\ArteDoMenu\esop.png" />
+    <Content Include="Content\ArteDoMenu\Exit.png" />
+    <Content Include="Content\ArteDoMenu\GameOver.png" />
+    <Content Include="Content\ArteDoMenu\Instrucao.png" />
+    <Content Include="Content\ArteDoMenu\Instructions.png" />
+    <Content Include="Content\ArteDoMenu\Menu.png" />
+    <Content Include="Content\ArteDoMenu\Pause.png" />
+    <Content Include="Content\ArteDoMenu\Play.png" />
+    <Content Include="Content\ArteDoMenu\ReturnToMenu.png" />
+    <Content Include="Content\ArteDoMenu\TelaDeInstrucao.png" />
+    <Content Include="Content\ArteDoMenu\TelaDeInstrucao2.png" />
+    <Content Include="Content\ArteDoMenu\voltar.png" />
+    <Content Include="Content\explosao.wav" />
+    <Content Include="Content\sondojogo.wav" />
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Content\ArteDoJogo\Fonte.spritefont" />
+    <None Include="Content\ArteDoJogo\Fonte2.spritefont" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
